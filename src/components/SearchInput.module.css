@@ -1,0 +1,98 @@
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .inputWrapper {
+        position: relative;
+    }
+
+    .inputWrapper img{
+        position: absolute;
+        left: 1rem;
+        right: 0.5rem;
+        top: 0.75rem;
+        pointer-events: none;
+    }
+
+    .searchInput {
+        width: 18rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+    }
+
+    .searchInput:focus {
+        width: 18rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+        outline: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+    .inputWrapper {
+        position: relative;
+    }
+
+    .inputWrapper img{
+        position: absolute;
+        left: 1rem;
+        right: 0.5rem;
+        top: 0.75rem;
+        pointer-events: none;
+    }
+
+    .searchInput {
+        width: 25rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+    }
+
+    .searchInput:focus {
+        width: 25rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+        outline: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .inputWrapper {
+        position: relative;
+    }
+    
+    .inputWrapper img{
+        position: absolute;
+        left: 1rem;
+        right: 0.5rem;
+        top: 0.75rem;
+        pointer-events: none;
+    }
+    
+    .searchInput {
+        width: 37rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+    }
+    
+    .searchInput:focus {
+        width: 37rem;
+        height: 3rem;
+        padding-left: 3rem;
+        
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+        outline: none;
+    }
+}

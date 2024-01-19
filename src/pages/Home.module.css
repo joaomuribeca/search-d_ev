@@ -1,0 +1,42 @@
+.wrapper {
+    height: 100vh;
+    max-width: 50rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: var(--blue);
+}
+
+.titlePurple {
+    font-family: 'Nunito', sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: var(--purple);
+}
+
+.underlineStyle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--purple);
+}
+
+.searchWrapper {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 11rem;
+    gap: 2rem;
+}

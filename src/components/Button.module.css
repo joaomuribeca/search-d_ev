@@ -1,0 +1,25 @@
+.button {
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 28px;
+
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #a346db;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
