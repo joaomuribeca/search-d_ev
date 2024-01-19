@@ -17,6 +17,7 @@ export function Profile() {
   const [repos, setRepos] = useState<Array<UserReposType>>([]);
   const [refresh, setRefresh] = useState(false);
 
+  // Busca os repositórios do User presente no contexto
   async function fetchReposData() {
     try {
       setRepos([]);
@@ -42,6 +43,7 @@ export function Profile() {
     }
   }
 
+  // Checa se existe algum User no Contexto, se não tiver volta para a home
   function checkUser() {
     Object.keys(user).length === 0 ? navigate("/") : {};
   }

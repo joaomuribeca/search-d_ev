@@ -80,7 +80,6 @@ export interface UserReposType {
     open_issues: number,
     watchers: number,
     default_branch: string
-
 }
 
 export interface UserType {

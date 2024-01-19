@@ -1,3 +1,4 @@
+// Calcula a diferença entre a data atual e uma data informada nos parêmetros da função
 export function calcDiffDays(initialDate: string) {
     let currentDate = new Date().toISOString().slice(0, 10);
     let parsedInitialDate = initialDate.slice(0, 10);
@@ -26,4 +27,4 @@ export function calcDiffDays(initialDate: string) {
     }
 
     return lastUpdatedMessage;
-  }
+}

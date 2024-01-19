@@ -14,6 +14,7 @@ export function Header() {
 
   const [inputValue, setInputValue] = useState('');
 
+  // Busca pelo User usando o valor do input
   async function fetchData(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget
@@ -53,6 +54,7 @@ export function Header() {
     }
   }
 
+  // Lida com as mudanças no input
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const newValue = event.currentTarget.value;
 
