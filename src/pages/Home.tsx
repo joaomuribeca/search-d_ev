@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Bounce, toast } from 'react-toastify';
 
 import { getUser } from '../services/userService';
 import { UserContext } from '../contexts/UserContext';
@@ -26,8 +27,32 @@ import styles from './Home.module.css';
         const result = await getUser(`${formElements.search.value}`);
         setUser(result);
         navigate("/perfil");
-      } catch (error) {
-        console.error('Error fetching data:', error);
+      } catch (error: any) {
+        if (error.response.status === 404) {
+          toast.error('Usuário não encontrado', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        } else {
+          toast.error('Ocorreu algum problema, tente novamente', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        }
       }
     }
 

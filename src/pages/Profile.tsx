@@ -8,6 +8,7 @@ import Sidebar from "../components/Sidebar";
 import styles from './Profile.module.css';
 import { UserContext, UserReposType } from "../contexts/UserContext";
 import { getUserRepos } from "../services/userService";
+import { Bounce, toast } from "react-toastify";
 
 export function Profile() {
   const { user } = useContext(UserContext);
@@ -26,8 +27,18 @@ export function Profile() {
 
       setRepos(result);
       setRefresh(!refresh);
-    } catch (error) {
-      console.error('Error fetching data:', error);
+    } catch (error: any) {
+      toast.error('Ocorreu algum problema ao buscar os repositórios do usuário', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
     }
   }
 

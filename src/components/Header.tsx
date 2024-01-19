@@ -7,6 +7,7 @@ import { getUser } from '../services/userService';
 import { SearchInput } from './SearchInput';
 
 import styles from './Header.module.css';
+import { Bounce, toast } from 'react-toastify';
 
 export function Header() {
   const { setUser } = useContext(UserContext);
@@ -23,8 +24,32 @@ export function Header() {
     try {
       const result = await getUser(`${formElements.search.value}`);
       setUser(result);
-    } catch (error) {
-      console.error('Error fetching data:', error);
+    } catch (error: any) {
+      if (error.response.status === 404) {
+        toast.error('Usuário não encontrado', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
+      } else {
+        toast.error('Ocorreu algum problema, tente novamente', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
+      }
     }
   }
 
