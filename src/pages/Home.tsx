@@ -10,7 +10,7 @@ import { Button } from '../components/Button';
 import styles from './Home.module.css';
  
  export function Home() {
-    const { user, setUser } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
 
     const [inputValue, setInputValue] = useState('');

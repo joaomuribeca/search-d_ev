@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 
 import { UserContext } from '../contexts/UserContext';
-import { useNavigate } from 'react-router-dom';
 
 import { getUser } from '../services/userService';
 
@@ -10,8 +9,7 @@ import { SearchInput } from './SearchInput';
 import styles from './Header.module.css';
 
 export function Header() {
-  const { user, setUser } = useContext(UserContext);
-  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const [inputValue, setInputValue] = useState('');
 

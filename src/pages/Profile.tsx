@@ -10,7 +10,7 @@ import { UserContext, UserReposType } from "../contexts/UserContext";
 import { getUserRepos } from "../services/userService";
 
 export function Profile() {
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
   const [repos, setRepos] = useState<Array<UserReposType>>([]);
